@@ -1,0 +1,6 @@
+PychoPy must:
+- show stimulus
+- randomize stimulus
+- take keystrokes
+- send flag that key was pressed after each keystroke
+- save data to a file
