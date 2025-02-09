@@ -2,3 +2,4 @@ envs/
 *.env/
 venv/
 cookies.txt
+vids/
