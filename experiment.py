@@ -1,5 +1,5 @@
 from psychopy import visual, core, event
-import serial
+from pylsl import StreamInfo, StreamOutlet
 
 trials = [
     {"video":, "images": []},  #contains filepaths like "stimuli/video/video.mp4"
@@ -21,11 +21,11 @@ def createImages(trials, trial):
     return relevant_images
 
 def sendMarker(marker):
-    ser.write(f"{marker}\n".encode())
+    outlet.push_sample([marker])
 
 
-port = "myport"
-ser = serial.Serial(port, 115200, timeout=1)
+info = StreamInfo("NeuroCrimeMarkerStream", "Markers", 1, 0, "int32")
+outlet = StreamOutlet(info)
 
 win = visual.Window(size=(800,600), color=(0,0,0), units='pix')
 
@@ -50,8 +50,6 @@ for trial in range(trials):
     core.wait(10)
 
 
-
-
-ser.close()
 win.close()
 core.quit()
+
