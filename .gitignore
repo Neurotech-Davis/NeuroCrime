@@ -1,4 +1,6 @@
 envs/
 *.env/
 venv/
+cookies.txt
+vids/
 .DS_Store
