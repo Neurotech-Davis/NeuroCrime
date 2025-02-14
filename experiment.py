@@ -1,5 +1,4 @@
-from psychopy import visual, core, event, data
-from psychopy.constants import (NOT_STARTED, STARTED, FINISHED)
+from psychopy import visual, core, event
 from pylsl import StreamInfo, StreamOutlet
 from pathlib import Path
 
