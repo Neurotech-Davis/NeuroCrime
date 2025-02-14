@@ -1,8 +1,11 @@
 from psychopy import visual, core, event
-from pylsl import StreamInfo, StreamOutlet
 from pathlib import Path
+import csv
+import random
 
 root = Path(__file__).resolve().parent / "Display"
+
+responses = []
 
 trials = [
     {
@@ -57,6 +60,11 @@ trials = [
     },
 ]
 
+for trial in trials:
+    random.shuffle(trial["images"])
+
+random.shuffle(trials)
+
 
 def createDisplay(trial):
     video = trials[trial]["video"]
@@ -69,14 +77,8 @@ def createImages(trial):
         relevant_images.append(image)
     return relevant_images
 
-def sendMarker(marker):
-    outlet.push_sample([marker])
-
-
-info = StreamInfo("NeuroCrimeMarkerStream", "Markers", 1, 0, "int32")
-outlet = StreamOutlet(info)
-
 win = visual.Window(size=(800,600), color=(0,0,0), units='pix')
+globalClock = core.Clock()
 
 fixation_point = visual.ImageStim(win, image=root / "gray-dot.png", pos=(0,0))
 fixation_point.draw()
@@ -94,18 +96,29 @@ for trial in range(len(trials)):
         win.flip()
 
     core.wait(1)
-    for img in images:
+    for i, img in enumerate(images):
         img.draw()
         win.flip()
-        keys = event.waitKeys(maxWait=3, keyList=['f','j'])
+        keys = event.waitKeys(maxWait=5, keyList=['f','j'], timeStamped=globalClock)
         if keys:
-            keyInt = {"f": 0, "j": 1}
-            sendMarker(keyInt[keys[0]])
-            continue
+            key, t_key = keys[0]
+            responses.append({
+                "trial": trial,
+                "image": trials[trial]["images"][i].name,
+                "key": key,
+                "timestamp": t_key
+            })
 
     core.wait(3)
 
 
+
+with open("responses.csv", "w", newline="") as csvfile:
+    fieldnames = ["trial", "image", "key", "time"]
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writeheader()
+    for response in responses:
+        writer.writerow(response)
 
 win.close()
 core.quit()
