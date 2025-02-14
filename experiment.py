@@ -1,4 +1,4 @@
-from psychopy import visual, core, event
+from psychopy import visual, core, event, data
 from psychopy.constants import (NOT_STARTED, STARTED, FINISHED)
 from pylsl import StreamInfo, StreamOutlet
 from pathlib import Path
@@ -66,7 +66,7 @@ def createDisplay(trial):
 def createImages(trial):
     relevant_images=[]
     for i in range(len(trials[trial]["images"])):
-        image =  visual.ImageStim(win, image=trials[trial]["images"][i], pos=(0,0))
+        image =  visual.ImageStim(win, image=trials[trial]["images"][i], size =(640,480),pos=(0,0))
         relevant_images.append(image)
     return relevant_images
 
@@ -88,39 +88,24 @@ for trial in range(len(trials)):
     display = createDisplay(trial)
     images = createImages(trial)
 
-    if display.status == NOT_STARTED and tThisFlip >= 10.0 - frameTolerance:
-        display.frameNStart = frameN  # exact frame index
-        display.tStart = t  # local time
-        display.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(display, 'tStartRefresh')  # time at next screen refresh
-        thisExp.timestampOnFlip(win, 'movie.started')
-        display.status = STARTED
-        display.setAutoDraw(True)
-        display.play()
+    display.play()
 
-    # if movie is stopping this frame...
-    if display.status == STARTED:
-        if tThisFlipGlobal > display.tStartRefresh + 13.0 - frameTolerance or display.isFinished:
-            display.tStop = t  # not accounting for screen refresh
-            display.tStopRefresh = tThisFlipGlobal  # on global time
-            display.frameNStop = frameN  # exact frame index
-            thisExp.timestampOnFlip(win, 'movie.stopped')
-            display.status = FINISHED
-            display.setAutoDraw(False)
-            display.stop()
+    while not display.getIsFinished():
+        display.draw()
+        win.flip()
 
-
-    core.wait(1) #edit waiting period
-
+    core.wait(1)
     for img in images:
         img.draw()
         win.flip()
         keys = event.waitKeys(maxWait=3, keyList=['f','j'])
         if keys:
-            sendMarker(f"User_Response_{keys[0]}")
+            keyInt = {"f": 0, "j": 1}
+            sendMarker(keyInt[keys[0]])
             continue
 
     core.wait(3)
+
 
 
 win.close()
