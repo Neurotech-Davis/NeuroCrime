@@ -3,8 +3,8 @@ import pandas as pd
 from pylsl import resolve_byprop, StreamInlet
 import sys
 
-eeg_streams = resolve_byprop('name', 'OpenBCI_EEG', timeout=5)
-marker_streams = resolve_byprop('name', 'PsychoPy_Markers', timeout=5)
+eeg_streams = resolve_byprop('name', 'NeuroCrimeEEG', timeout=5)
+marker_streams = resolve_byprop('name', 'NeuroCrimeMarkers', timeout=5)
 
 try:
     if not eeg_streams or not marker_streams:
