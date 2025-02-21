@@ -45,5 +45,5 @@ while time.time() - start_time < collection_duration:
 eeg_df = pd.DataFrame(eeg_data)
 marker_df = pd.DataFrame(marker_data)
 
-eeg_df.to_csv("eeg_output.csv")
-marker_df.to_csv("marker_output.csv")
+eeg_df.to_csv("eeg_output.csv", mode='a')
+marker_df.to_csv("marker_output.csv", mode='a')
