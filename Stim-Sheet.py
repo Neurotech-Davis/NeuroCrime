@@ -9,12 +9,22 @@ root = Path(r"C:\Users\diego\OneDrive\Documents\Coding\Neurotech\Neurocrime\Disp
 
 trials = [
     {
+        "video": root / "24-Kobe-Bryant-(Lakers)-selected" / "Kobe-Bryant-Clip.mp4",
+        "images": [
+            root / "24-Kobe-Bryant-(Lakers)-selected" / "$24-Kobe-Bryant.png",
+            root / "24-Kobe-Bryant-(Lakers)-selected" / "9-Matt-Barnes.png",
+            root / "24-Kobe-Bryant-(Lakers)-selected" / "14-Troy-Murphy.png",
+            root / "24-Kobe-Bryant-(Lakers)-selected" / "15-Metta-World-Peace.png",
+            root / "24-Kobe-Bryant-(Lakers)-selected" / "16-Pau-Gasol.png",
+        ],
+    },
+    {
         "video": root / "11-Leemet-Bockler-(BC-Kalev)-selected" / "Leemet-Bockler-High-Clip1.mp4",
         "images": [
+            root / "11-Leemet-Bockler-(BC-Kalev)-selected" / "$11-Leemet-Bockler.png",
             root / "11-Leemet-Bockler-(BC-Kalev)-selected" / "2-Kasper-Surorg.png",
             root / "11-Leemet-Bockler-(BC-Kalev)-selected" / "33-Martin-Meiers.png",
             root / "11-Leemet-Bockler-(BC-Kalev)-selected" / "9-Severi-Kaukiainen.png",
-            root / "11-Leemet-Bockler-(BC-Kalev)-selected" / "$11-Leemet-Bockler.png",
             root / "11-Leemet-Bockler-(BC-Kalev)-selected" / "15-Anrijs-Miska.png",
         ],
     },
@@ -63,9 +73,9 @@ trials = [
 vid_list = [] 
 stim_list = []
 culprit_list = []
-times_face_shown = 10
-shuffled_index = [0,1,2,3,4]
-shuffled_index_next = [0,1,2,3,4]
+# times_face_shown = 10
+# shuffled_index = [0,1,2,3,4]
+# shuffled_index_next = [0,1,2,3,4]
 
 # for clip_struct in trials:
 #   vid_list.append(clip_struct["video"])
@@ -82,16 +92,17 @@ shuffled_index_next = [0,1,2,3,4]
 for clip_struct in trials:
   vid_list.append(clip_struct["video"])
   for i in range(5):
-      stim_list.append(clip_struct["images"][shuffled_index_next[i]])
-      culprit_list.append(clip_struct["images"][shuffled_index_next[i]].name[0] == '$') # Are they the culprit? Culprits labeled with $
+      stim_list.append(clip_struct["images"][i])
+      culprit_list.append(clip_struct["images"][i].name[0] == '$') # Are they the culprit? Culprits labeled with $. T or F
 
     
 start_list = []
 end_list = []
-for i in range(5):
+times_to_show = []
+for i in range(len(trials)):
     start_list.append(i*(5)) # starts indexing at 0, and header row doesn't count
     end_list.append((i+1)*(5))
-
+    times_to_show.append(2 if i == 0 else 10) # First time is a trial, so we don't want to show full 10 times.
 
     
 
@@ -108,6 +119,7 @@ stim_vids = {
     "stim_vids": vid_list,
     "start_index": start_list,
     "end_index": end_list,
+    "repetitions": times_to_show
 }
 df = pd.DataFrame(stim_vids)
 df.to_excel("stim-vids.xlsx", index=False)
