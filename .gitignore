@@ -4,3 +4,4 @@ venv/
 cookies.txt
 vids/
 .DS_Store
+data/
