@@ -94,7 +94,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="23" valType="code" updates="constant" name="stopVal"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
       <MovieComponent name="clips" plugin="None">
@@ -115,9 +115,9 @@
         <Param val="(2880, 1920)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="1" valType="code" updates="None" name="startVal"/>
+        <Param val="2" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="20" valType="code" updates="constant" name="stopVal"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
@@ -163,9 +163,9 @@
         <Param val="" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="3" valType="code" updates="None" name="startVal"/>
+        <Param val="2.5" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="4" valType="code" updates="constant" name="stopVal"/>
+        <Param val="3.5" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
@@ -194,7 +194,7 @@
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="1" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="2" valType="code" updates="constant" name="stopVal"/>
+        <Param val="1.5" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
@@ -213,9 +213,9 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="3" valType="code" updates="None" name="startVal"/>
+        <Param val="2.5" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="4" valType="code" updates="constant" name="stopVal"/>
+        <Param val="3.5" valType="code" updates="constant" name="stopVal"/>
         <Param val="last key" valType="str" updates="constant" name="store"/>
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
@@ -228,7 +228,7 @@
         <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
         <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
         <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="aligning_text" valType="code" updates="None" name="name"/>
@@ -273,7 +273,7 @@
         <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
         <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
         <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="aligning_image" valType="code" updates="None" name="name"/>
@@ -287,7 +287,7 @@
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="salmon" valType="color" updates="constant" name="fillColor"/>
@@ -350,7 +350,7 @@
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="1" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="4" valType="code" updates="constant" name="stopVal"/>
+        <Param val="10" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="For this task you will be asked to facially identify the culprit vs. the innocents. The culprit will be the player who scores." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
@@ -375,9 +375,9 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="6" valType="code" updates="None" name="startVal"/>
+        <Param val="12" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="4" valType="code" updates="constant" name="stopVal"/>
+        <Param val="10" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="You will identify them by pressing &amp;#10;f  (left hand key)   or    j  (right hand key) &amp;#10;on your keyboard." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
@@ -402,9 +402,9 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="11" valType="code" updates="None" name="startVal"/>
+        <Param val="23" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="6" valType="code" updates="constant" name="stopVal"/>
+        <Param val="10" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Get ready to pay attention to a basketball clip! Remember the scorer's face." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
@@ -426,7 +426,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="5.5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="7.5" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
       <TextComponent name="text" plugin="None">
@@ -447,7 +447,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="2" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="4" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -475,7 +475,7 @@
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
       <KeyboardComponent name="key_resp_2" plugin="None">
-        <Param val="'f','j','enter','space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="'f','j'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
         <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
@@ -487,7 +487,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="3" valType="code" updates="None" name="startVal"/>
+        <Param val="4" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="last key" valType="str" updates="constant" name="store"/>
@@ -543,7 +543,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Press f, j, or space to continue to the next clip" valType="str" updates="constant" name="text"/>
+        <Param val="Press f or j to continue to the next clip" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="1500" valType="num" updates="constant" name="wrapWidth"/>
@@ -556,7 +556,7 @@
         <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
         <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
         <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="baseline_recording" valType="code" updates="None" name="name"/>
@@ -635,7 +635,7 @@
     <Routine name="explaining_task_text_2"/>
     <LoopInitiator loopType="TrialHandler" name="new_clip">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[{'stim_vids': 'C:\\Users\\diego\\OneDrive\\Documents\\Coding\\Neurotech\\Neurocrime\\Display/24-Kobe-Bryant-(Lakers)-selected/Kobe-Bryant-Clip.mp4', 'start_index': 0, 'end_index': 5, 'repetitions': 2}, {'stim_vids': 'C:\\Users\\diego\\OneDrive\\Documents\\Coding\\Neurotech\\Neurocrime\\Display/11-Leemet-Bockler-(BC-Kalev)-selected/Leemet-Bockler-New-Clip.mp4', 'start_index': 5, 'end_index': 10, 'repetitions': 10}, {'stim_vids': 'C:\\Users\\diego\\OneDrive\\Documents\\Coding\\Neurotech\\Neurocrime\\Display/2-Cooper-Flagg-(Duke-Blue-Devils)-selected/Cooper-Flag-Clip2.mp4', 'start_index': 10, 'end_index': 15, 'repetitions': 10}, {'stim_vids': 'C:\\Users\\diego\\OneDrive\\Documents\\Coding\\Neurotech\\Neurocrime\\Display/23-Stephanie-Mavunga-(Poland)-selected/Stephanie-Mavunga-Clip2.mp4', 'start_index': 15, 'end_index': 20, 'repetitions': 10}, {'stim_vids': 'C:\\Users\\diego\\OneDrive\\Documents\\Coding\\Neurotech\\Neurocrime\\Display/9-Marcelinho-Huertas-(La-Laguna-Tenerife)-selected/Marcelinho-Huertas-Clip2.mp4', 'start_index': 20, 'end_index': 25, 'repetitions': 10}, {'stim_vids': 'C:\\Users\\diego\\OneDrive\\Documents\\Coding\\Neurotech\\Neurocrime\\Display/9-Terezia-Palenikova-(Slovakia)-selected/Terezia-Palenikova-Clip1.mp4', 'start_index': 25, 'end_index': 30, 'repetitions': 10}]" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'stim_vids': 'C:\\Users\\diego\\OneDrive\\Documents\\Coding\\Neurotech\\Neurocrime\\Display/24-Kobe-Bryant-(Lakers)-selected/Kobe-Bryant-Clip.mp4', 'start_index': 0, 'end_index': 5, 'repetitions': 2}, {'stim_vids': 'C:\\Users\\diego\\OneDrive\\Documents\\Coding\\Neurotech\\Neurocrime\\Display/11-Leemet-Bockler-(BC-Kalev)-selected/Leemet-Bockler-New-Clip.mp4', 'start_index': 5, 'end_index': 10, 'repetitions': 6}, {'stim_vids': 'C:\\Users\\diego\\OneDrive\\Documents\\Coding\\Neurotech\\Neurocrime\\Display/2-Cooper-Flagg-(Duke-Blue-Devils)-selected/Cooper-Flag-Clip2.mp4', 'start_index': 10, 'end_index': 15, 'repetitions': 6}, {'stim_vids': 'C:\\Users\\diego\\OneDrive\\Documents\\Coding\\Neurotech\\Neurocrime\\Display/23-Stephanie-Mavunga-(Poland)-selected/Stephanie-Mavunga-Clip2.mp4', 'start_index': 15, 'end_index': 20, 'repetitions': 6}, {'stim_vids': 'C:\\Users\\diego\\OneDrive\\Documents\\Coding\\Neurotech\\Neurocrime\\Display/9-Marcelinho-Huertas-(La-Laguna-Tenerife)-selected/Marcelinho-Huertas-Clip2.mp4', 'start_index': 20, 'end_index': 25, 'repetitions': 6}, {'stim_vids': 'C:\\Users\\diego\\OneDrive\\Documents\\Coding\\Neurotech\\Neurocrime\\Display/9-Terezia-Palenikova-(Slovakia)-selected/Terezia-Palenikova-Clip1.mp4', 'start_index': 25, 'end_index': 30, 'repetitions': 6}]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="stim-vids.xlsx" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
@@ -652,7 +652,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="nReps" updates="None" val="repetitions" valType="num"/>
       <Param name="name" updates="None" val="trials_2" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>

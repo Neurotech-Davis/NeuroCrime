@@ -77,7 +77,7 @@ trials = [
 ]
 
 vid_list = [] 
-len_list = []
+# len_list = []
 stim_list = []
 culprit_list = []
 # times_face_shown = 10
@@ -98,7 +98,7 @@ culprit_list = []
 
 for clip_struct in trials:
   vid_list.append(clip_struct["video"])
-  len_list.append(clip_struct["length"]+1)
+#   len_list.append(clip_struct["length"]+1)
   for i in range(5):
       stim_list.append(clip_struct["images"][i])
       culprit_list.append(clip_struct["images"][i].name[0] == '$') # Are they the culprit? Culprits labeled with $. T or F
@@ -128,7 +128,7 @@ stim_vids = {
     "start_index": start_list,
     "end_index": end_list,
     "repetitions": times_to_show,
-    "length": len_list
+    # "length": len_list
 }
 df = pd.DataFrame(stim_vids)
 df.to_excel("stim-vids.xlsx", index=False)
