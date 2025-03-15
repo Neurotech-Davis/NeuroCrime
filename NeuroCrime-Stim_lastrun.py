@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on March 05, 2025, at 15:41
+    on March 13, 2025, at 20:19
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -399,6 +399,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=0.0);
     
     # --- Initialize components for Routine "aligning_image" ---
+    polygon = visual.ShapeStim(
+        win=win, name='polygon',
+        size=(1000, 1000), vertices='triangle',
+        ori=0.0, pos=(0, 0), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor='salmon', fillColor='salmon',
+        opacity=None, depth=0.0, interpolate=True)
     
     # --- Initialize components for Routine "baseline_recording" ---
     text_4 = visual.TextStim(win=win, name='text_4',
@@ -823,7 +830,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine aligning_image
         aligning_image = data.Routine(
             name='aligning_image',
-            components=[],
+            components=[polygon],
         )
         aligning_image.status = NOT_STARTED
         continueRoutine = True
@@ -864,6 +871,40 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if tThisFlip > aligning_image.maxDuration-frameTolerance:
                 aligning_image.maxDurationReached = True
                 continueRoutine = False
+            
+            # *polygon* updates
+            
+            # if polygon is starting this frame...
+            if polygon.status == NOT_STARTED and tThisFlip >= 1.25-frameTolerance:
+                # keep track of start time/frame for later
+                polygon.frameNStart = frameN  # exact frame index
+                polygon.tStart = t  # local t and not account for scr refresh
+                polygon.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(polygon, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'polygon.started')
+                # update status
+                polygon.status = STARTED
+                polygon.setAutoDraw(True)
+            
+            # if polygon is active this frame...
+            if polygon.status == STARTED:
+                # update params
+                pass
+            
+            # if polygon is stopping this frame...
+            if polygon.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > polygon.tStartRefresh + 1.25-frameTolerance:
+                    # keep track of stop time/frame for later
+                    polygon.tStop = t  # not accounting for scr refresh
+                    polygon.tStopRefresh = tThisFlipGlobal  # on global time
+                    polygon.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'polygon.stopped')
+                    # update status
+                    polygon.status = FINISHED
+                    polygon.setAutoDraw(False)
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1628,7 +1669,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if isinstance(new_face, data.TrialHandler2) and thisNew_face.thisN != new_face.thisTrial.thisN:
                     continueRoutine = False
                 showing_faces.forceEnded = routineForceEnded = not continueRoutine
-                while continueRoutine and routineTimer.getTime() < 6.5:
+                while continueRoutine and routineTimer.getTime() < 6.0:
                     # get current time
                     t = routineTimer.getTime()
                     tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1639,7 +1680,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # *mugshots* updates
                     
                     # if mugshots is starting this frame...
-                    if mugshots.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
+                    if mugshots.status == NOT_STARTED and tThisFlip >= 2.5-frameTolerance:
                         # keep track of start time/frame for later
                         mugshots.frameNStart = frameN  # exact frame index
                         mugshots.tStart = t  # local t and not account for scr refresh
@@ -1673,7 +1714,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # *grey_dot* updates
                     
                     # if grey_dot is starting this frame...
-                    if grey_dot.status == NOT_STARTED and tThisFlip >= 1.5-frameTolerance:
+                    if grey_dot.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
                         # keep track of start time/frame for later
                         grey_dot.frameNStart = frameN  # exact frame index
                         grey_dot.tStart = t  # local t and not account for scr refresh
@@ -1708,7 +1749,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     waitOnFlip = False
                     
                     # if key_resp is starting this frame...
-                    if key_resp.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
+                    if key_resp.status == NOT_STARTED and tThisFlip >= 2.5-frameTolerance:
                         # keep track of start time/frame for later
                         key_resp.frameNStart = frameN  # exact frame index
                         key_resp.tStart = t  # local t and not account for scr refresh
@@ -1796,7 +1837,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 elif showing_faces.forceEnded:
                     routineTimer.reset()
                 else:
-                    routineTimer.addTime(-6.500000)
+                    routineTimer.addTime(-6.000000)
                 thisExp.nextEntry()
                 
             # completed 1.0 repeats of 'new_face'
