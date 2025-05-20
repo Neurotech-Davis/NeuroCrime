@@ -5,3 +5,8 @@ cookies.txt
 vids/
 .DS_Store
 data/
+
+Participant*/
+Processed/
+Processed-Better/
+.ipynb_checkpoints/
