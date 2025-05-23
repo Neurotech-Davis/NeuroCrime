@@ -7,7 +7,8 @@ This repo consists of:
 3) A script to combine EEG data recorded via OpenBCI with the Pyschopy procedure data files.
 4) A script to download YT videos to use as stimulus.
 
-
+Project Description:
+The Neurocrime project was designed to analyze the accuracy of a participants recollection of an event. Our goal was to be able to distinguish if someone could accurately identify the correct suspect among innocent people. Due to the ethical constraints and difficutly of finding reliable crime videos, we had to switch our media to basketball clips. This made us switch our experimental design to make the participants identify the individual who scored in the basketball clip.
 ---
 ### Note 1:
 The downloader script needs to download .webm files in order to maintain as high quality as possible. Converting to mp4 with high resolution can take a while, so we suggest clipping the .webm file before converting.
